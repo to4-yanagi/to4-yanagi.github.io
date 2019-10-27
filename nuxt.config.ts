@@ -1,6 +1,25 @@
 import createClient from './plugins/contentful'
 import getConfigForKeys from './config.js'
 
+interface MyIterface1 {
+  module: {
+    rules: object[]
+  }
+}
+
+interface MyIterface2 {
+  isDev: boolean,
+  isClient: boolean
+}
+
+interface MyIterface3 {
+  items: Array<{
+    fields: {
+      slug: string
+    }
+  }>;
+}
+
 const ctfConfig = getConfigForKeys([
   'CTF_SPACE_ID',
   'CTF_CDA_ACCESS_TOKEN',
@@ -20,8 +39,9 @@ export default {
     ]
   },
   loading: { color: '#3B8070' },
+  buildModules: ['@nuxt/typescript-build'],
   build: {
-    extend (config, { isDev, isClient }) {
+    extend (config: MyIterface1, { isDev, isClient }: MyIterface2) {
       if (isDev && isClient) {
         config.module.rules.push({
           enforce: 'pre',
@@ -37,7 +57,7 @@ export default {
     routes() {
       return createClient(ctfConfig)
         .getEntries(ctfConfig.CTF_POST_TYPE_ID)
-        .then(entries => {
+        .then((entries: MyIterface3) => {
           return [...entries.items.map(entry => `/blog/${entry.fields.slug}`)]
         })
     }
