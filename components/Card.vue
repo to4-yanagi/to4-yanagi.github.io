@@ -1,6 +1,6 @@
 <template>
   <nuxt-link
-    :to="{ name: `/blog/${slug}`}"
+    :to="`/blog/${slug}`"
     class="wrapper"
   >
     <article class="card">
