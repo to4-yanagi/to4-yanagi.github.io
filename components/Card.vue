@@ -1,8 +1,6 @@
 <template>
   <nuxt-link
-    :to="{ name: 'blog_slug', params: {
-      sys: id
-    }}"
+    :to="{ name: `/blog/${slug}`}"
     class="wrapper"
   >
     <article class="card">
@@ -25,6 +23,10 @@ export default {
       default: ''
     },
     date: {
+      type: String,
+      default: ''
+    },
+    slug: {
       type: String,
       default: ''
     }

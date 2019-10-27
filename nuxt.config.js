@@ -33,6 +33,7 @@ export default {
     }
   },
   generate: {
+    dir: 'docs',
     routes() {
       return createClient(ctfConfig)
         .getEntries(ctfConfig.CTF_POST_TYPE_ID)
