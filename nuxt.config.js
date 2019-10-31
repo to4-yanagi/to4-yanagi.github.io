@@ -3,8 +3,7 @@ import getConfigForKeys from './config.js'
 
 const ctfConfig = getConfigForKeys([
   'CTF_SPACE_ID',
-  'CTF_CDA_ACCESS_TOKEN',
-  'CTF_POST_TYPE_ID'
+  'CTF_CDA_ACCESS_TOKEN'
 ])
 
 export default {
@@ -20,6 +19,13 @@ export default {
     ]
   },
   loading: { color: '#3B8070' },
+  modules: ['@nuxtjs/style-resources'],
+  styleResources: {
+    scss: [
+      '@/assets/scss/_reset.scss',
+      '@/assets/scss/_variables.scss'
+    ]
+  },
   build: {
     extend (config, { isDev, isClient }) {
       if (isDev && isClient) {
@@ -36,7 +42,7 @@ export default {
     dir: 'docs',
     routes() {
       return createClient(ctfConfig)
-        .getEntries(ctfConfig.CTF_POST_TYPE_ID)
+        .getEntries('post')
         .then(entries => {
           return [...entries.items.map(entry => `/blog/${entry.fields.slug}`)]
         })
@@ -45,6 +51,5 @@ export default {
   env: {
     CTF_SPACE_ID: ctfConfig.CTF_SPACE_ID,
     CTF_CDA_ACCESS_TOKEN: ctfConfig.CTF_CDA_ACCESS_TOKEN,
-    CTF_POST_TYPE_ID: ctfConfig.CTF_POST_TYPE_ID
   }
 }

@@ -1,0 +1,37 @@
+// ---------- 長さ系
+$basic-margin: 1.2rem;
+$basic-half-margin: $basic-margin / 2;
+$basic-double-margin : $basic-margin * 2;
+$content-max-width: 800px;
+$pc-min-width: 1024px;
+$tb-min-width: 767px;
+$sp-min-width: 480px;
+$sp-width: 80%;
+$festival-banner-width: 1200px;
+
+// ---------- フォントサイズ系
+$font-small: 1.2rem;
+$font-medium: 1.4rem;
+$font-big: 1.6rem;
+$font-title: 2rem;
+
+// ---------- 段落スタイル系
+$paragraph-line-height: 1.6;
+$paragraph-margin: $paragraph-line-height*$font-small;
+
+// ---------- 色パレット
+$color-white: #FFF;
+$color-black: #000;
+$color-gray: #E1E1E1;
+$color_orange: #F0BC8C;
+$color_skin: #F0DBB9;
+$color_gold: #F2D999;
+$color_pink: #F0BCB7;
+$color_blue: #C1DED0;
+
+// ---------- 色役割 基本的変数はこっちで呼ぶ
+$color-basic-font: $color-black;
+$color-basic-bg: $color-white;
+$color-accent-bg: $color-gray;
+$color-basic-border: $color-black;
+$color-accent: linear-gradient($color_orange, $color_pink);
