@@ -6,6 +6,12 @@ const ctfConfig = getConfigForKeys([
   'CTF_CDA_ACCESS_TOKEN'
 ])
 
+const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
+  router: {
+    base: '/<repository-name>/'
+  }
+} : {}
+
 export default {
   head: {
     title: 'my_portfolio',
@@ -38,8 +44,8 @@ export default {
       }
     }
   },
+  routerBase,
   generate: {
-    dir: 'docs',
     routes() {
       return createClient(ctfConfig)
         .getEntries('post')
