@@ -13,17 +13,18 @@
 </template>
 
 <script>
+import Mixin from '@/static/mixin'
 import Card from '@/components/card'
 import MainVisual from '@/components/MainVisual'
 import createClient from '@/plugins/contentful'
 
 export default {
-  transition: 'slide-left',
+  mixins: [Mixin],
   head () {
     return {
-      title: "yanagi's portfolio",
+      title: this.siteTitle,
       meta: [
-        { hid: 'description', name: 'description', content: "yanagi's portfolio" }
+        { hid: 'description', name: 'description', content: this.siteTitle }
       ]
     }
   },

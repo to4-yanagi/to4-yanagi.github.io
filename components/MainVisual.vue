@@ -1,9 +1,16 @@
 <template>
   <article class="main_visual">
-    <h1>Yanagi's portfolio</h1>
+    <h1>{{ siteTitle }}</h1>
     <img src="@/assets/img/main_visual.png">
   </article>
 </template>
+
+<script>
+import Mixin from '@/static/mixin'
+export default {
+  mixins: [Mixin]
+}
+</script>
 
 <style lang="scss">
 .main_visual {

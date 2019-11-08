@@ -1,8 +1,15 @@
 <template>
   <article class="header">
-    <h1>Yanagi's portfolio</h1>
+    <h1>{{ siteTitle }}</h1>
   </article>
 </template>
+
+<script>
+import Mixin from '@/static/mixin'
+export default {
+  mixins: [Mixin]
+}
+</script>
 
 <style lang="scss">
 .header {
