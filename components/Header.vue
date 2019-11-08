@@ -7,7 +7,8 @@
 <style lang="scss">
 .header {
   position: sticky;
-  height: 50px;
+  height: 60px;
+  line-height: 60px;
   background-color: $color-accent-bg;
   font-size: $font-title;
   text-align: center;

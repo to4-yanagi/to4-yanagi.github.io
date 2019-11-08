@@ -1,5 +1,6 @@
 <template>
   <section class="index">
+    <MainVisual />
     <Card
       v-for="(post, i) in posts"
       :key="i"
@@ -12,13 +13,23 @@
 </template>
 
 <script>
-import Card from '~/components/card.vue'
-import createClient from '~/plugins/contentful.js'
+import Card from '@/components/card'
+import MainVisual from '@/components/MainVisual'
+import createClient from '@/plugins/contentful'
 
 export default {
   transition: 'slide-left',
+  head () {
+    return {
+      title: "yanagi's portfolio",
+      meta: [
+        { hid: 'description', name: 'description', content: "yanagi's portfolio" }
+      ]
+    }
+  },
   components: {
-    Card
+    Card,
+    MainVisual
   },
   asyncData({ env, params }) {
     return createClient()
