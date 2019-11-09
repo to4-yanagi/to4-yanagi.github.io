@@ -25,12 +25,21 @@ export default {
     ]
   },
   loading: { color: '#3B8070' },
-  modules: ['@nuxtjs/style-resources'],
+  modules: [
+    '@nuxtjs/markdownit',
+    '@nuxtjs/style-resources'
+  ],
   styleResources: {
     scss: [
       '@/assets/scss/_reset.scss',
-      '@/assets/scss/_variables.scss'
+      '@/assets/scss/_variables.scss',
+      '@/assets/scss/_markdown.scss'
     ]
+  },
+  markdownit: {
+    preset: 'default',
+    linkify: true,
+    breaks: true
   },
   build: {
     extend (config, { isDev, isClient }) {

@@ -1,6 +1,7 @@
 <template>
   <section class="index">
     <MainVisual />
+    <Profile />
     <Card
       v-for="(post, i) in posts"
       :key="i"
@@ -16,6 +17,7 @@
 import Mixin from '@/static/mixin'
 import Card from '@/components/card'
 import MainVisual from '@/components/MainVisual'
+import Profile from '@/components/Profile'
 import createClient from '@/plugins/contentful'
 
 export default {
@@ -30,7 +32,8 @@ export default {
   },
   components: {
     Card,
-    MainVisual
+    MainVisual,
+    Profile
   },
   asyncData({ env, params }) {
     return createClient()
