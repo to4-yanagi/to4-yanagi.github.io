@@ -54,15 +54,15 @@ export default {
     }
   },
   routerBase,
-  generate: {
-    routes() {
-      return createClient(ctfConfig)
-        .getEntries('post')
-        .then(entries => {
-          return [...entries.items.map(entry => `/blog/${entry.fields.slug}`)]
-        })
-    }
-  },
+  // generate: {
+  //   routes() {
+  //     return createClient(ctfConfig)
+  //       .getEntries('post')
+  //       .then(entries => {
+  //         return [...entries.items.map(entry => `/blog/${entry.fields.slug}`)]
+  //       })
+  //   }
+  // },
   env: {
     CTF_SPACE_ID: ctfConfig.CTF_SPACE_ID,
     CTF_CDA_ACCESS_TOKEN: ctfConfig.CTF_CDA_ACCESS_TOKEN,
