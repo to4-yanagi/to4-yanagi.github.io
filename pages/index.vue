@@ -2,14 +2,15 @@
   <section class="index">
     <MainVisual />
     <Profile />
-    <Card
+    <Skills />
+    <!-- <Card
       v-for="(post, i) in posts"
       :key="i"
       :title="post.fields.title"
       :id="post.sys.id"
       :date="post.sys.updatedAt"
       :slug="post.fields.slug"
-    />
+    /> -->
   </section>
 </template>
 
@@ -18,6 +19,7 @@ import Mixin from '@/static/mixin'
 import Card from '@/components/card'
 import MainVisual from '@/components/MainVisual'
 import Profile from '@/components/Profile'
+import Skills from '@/components/Skills'
 import createClient from '@/plugins/contentful'
 
 export default {
@@ -33,7 +35,8 @@ export default {
   components: {
     Card,
     MainVisual,
-    Profile
+    Profile,
+    Skills
   },
   asyncData({ env, params }) {
     return createClient()

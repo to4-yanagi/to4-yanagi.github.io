@@ -7,7 +7,6 @@ $pc-min-width: 1024px;
 $tb-min-width: 767px;
 $sp-min-width: 480px;
 $sp-width: 80%;
-$festival-banner-width: 1200px;
 
 // ---------- フォントサイズ系
 $font-small: 1.2rem;
@@ -33,5 +32,6 @@ $color-blue: #C1DED0;
 $color-basic-font: $color-black;
 $color-basic-bg: $color-white;
 $color-accent-bg: $color-blue;
-$color-basic-border: $color-black;
+$color-basic-border: $color-gray;
+$color-accent-bar: $color_orange;
 $color-accent: linear-gradient($color_orange, $color_pink);

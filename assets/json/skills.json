@@ -1,0 +1,106 @@
+{
+  "languages" : [
+    {
+      "name": "HTML5 / CSS3",
+      "score": 80
+    },
+    {
+      "name": "javascript / TypeScript",
+      "score": 90
+    },
+    {
+      "name": "C#",
+      "score": 70
+    },
+    {
+      "name": "Java",
+      "score": 70
+    },
+    {
+      "name": "RxJava",
+      "score": 60
+    },
+    {
+      "name": "Python3",
+      "score": 60
+    }
+  ],
+  "frameworks": [
+    {
+      "name": "react / redux",
+      "score": 90
+    },
+    {
+      "name": "gatsby.js",
+      "score": 70
+    },
+    {
+      "name": "vue.js",
+      "score": 80
+    },
+    {
+      "name": "nuxt.js",
+      "score": 70
+    },
+    {
+      "name": "React Native",
+      "score": 60
+    },
+    {
+      "name": "jest",
+      "score": 70
+    },
+    {
+      "name": "Django",
+      "score": 60
+    },
+    {
+      "name": "Spring Framework",
+      "score": 50
+    }
+  ],
+  "databases": [
+    {
+      "name": "postgreSQL",
+      "score": 70
+    },
+    {
+      "name": "MySQL / MariaDB",
+      "score": 60
+    },
+    {
+      "name": "Firebase Realtime DB",
+      "score": 50
+    }
+  ],
+  "others": [
+    {
+      "name": "git",
+      "score": 90
+    },
+    {
+      "name": "Linux / Unix",
+      "score": 70
+    },
+    {
+      "name": "wordpress",
+      "score": 70
+    },
+    {
+      "name": "Docker",
+      "score": 60
+    },
+    {
+      "name": "ansible",
+      "score": 60
+    },
+    {
+      "name": "jenkins",
+      "score": 60
+    },
+    {
+      "name": "circleCI",
+      "score": 60
+    }
+  ]
+}
