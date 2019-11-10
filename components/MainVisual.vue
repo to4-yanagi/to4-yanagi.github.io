@@ -7,6 +7,7 @@
 
 <script>
 import Mixin from '@/static/mixin'
+
 export default {
   mixins: [Mixin]
 }

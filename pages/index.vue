@@ -4,6 +4,7 @@
     <Profile />
     <Ability />
     <Skills />
+    <Contact />
     <!-- <Card
       v-for="(post, i) in posts"
       :key="i"
@@ -22,6 +23,7 @@ import MainVisual from '@/components/MainVisual'
 import Profile from '@/components/Profile'
 import Ability from '@/components/Ability'
 import Skills from '@/components/Skills'
+import Contact from '@/components/Contact'
 import createClient from '@/plugins/contentful'
 
 export default {
@@ -39,7 +41,8 @@ export default {
     MainVisual,
     Profile,
     Ability,
-    Skills
+    Skills,
+    Contact
   },
   asyncData({ env, params }) {
     return createClient()

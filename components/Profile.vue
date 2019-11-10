@@ -2,25 +2,39 @@
   <article class="profile">
     <div class="basic_info">
       <h2>About</h2>
-      <img class="main_icon" src="@/assets/img/icon.png">
+      <img class="main_icon" :src="mainIcon">
       <h3>yanagi (栁沢 俊彰)</h3>
-      <a href="https://twitter.com/to4_yanagi" target="_blank" rel="noopener">
-        <img class="social_icon" src="@/assets/img/twitter_icon.png">
-      </a>
-      <a href="https://twitter.com/to4_yanagi" target="_blank" rel="noopener">
-        <img class="social_icon" src="@/assets/img/github_icon.png">
-      </a>
+      <SocialIcon :link="twitterLink" :icon="twitterIcon" />
+      <SocialIcon :link="githubLink" :icon="githubIcon" />
     </div>
     <div class="markdown-body" v-html="profile" />
-    <p class="mail">Mail: yanagisawa@laughcraft.dev</p>
+    <p>Mail: {{ mail }}</p>
   </article>
 </template>
 
 <script>
+import Mixin from '@/static/mixin'
+import mainIcon from '@/assets/img/icon.png'
+import twitterIcon from '@/assets/img/twitter_icon.png'
+import githubIcon from '@/assets/img/github_icon.png'
 import profile from '@/assets/markdown/profile.md'
+import SocialIcon from '@/components/atoms/SocialIcon'
 
 export default {
+  mixins: [Mixin],
+  components: {
+    SocialIcon
+  },
   computed: {
+    mainIcon() {
+      return mainIcon
+    },
+    twitterIcon() {
+      return twitterIcon
+    },
+    githubIcon() {
+      return githubIcon
+    },
     profile() {
       return profile
     }
@@ -52,11 +66,6 @@ export default {
     h3 {
       margin: $basic-margin;
       font-size: $font-big;
-    }
-
-    .social_icon {
-      width: 30px;
-      height: 30px;
     }
   }
 }
