@@ -1,6 +1,6 @@
 <template>
   <article class="skills">
-    <h2>skills</h2>
+    <h2>Skills</h2>
     <h3>言語</h3>
     <SkillBar
       v-for="skill in skills.languages"
