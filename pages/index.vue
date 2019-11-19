@@ -3,7 +3,7 @@
     <MainVisual />
     <Profile />
     <Ability />
-    <Project :items="items" />
+    <Project :projects="projects" />
     <Skills />
     <Contact />
     <!-- <Card
@@ -51,7 +51,18 @@ export default {
     const { items } = await createClient().getEntries({
       content_type: "project"
     })
-    return { items }
+    const sortedProjects = items.map(project => {
+      return {
+        link: project.fields.link,
+        projectName: project.fields.projectName,
+        year: project.fields.year,
+        image: project.fields.image,
+        tags: project.fields.tags.sort((a, b) => a.fields.order < b.fields.order ? -1 : 1)
+      }
+    })
+    return {
+      projects : sortedProjects
+    }
   }
   // async asyncData({ env, params }) {
   //   return await createClient()

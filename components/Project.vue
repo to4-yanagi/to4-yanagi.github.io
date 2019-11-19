@@ -4,16 +4,16 @@
     <div class="projext_flex">
       <div
         class="projext_container"
-        v-for="(item, i) in items"
+        v-for="(project, i) in projects"
         :key="i"
       >
-        <a :href="item.fields.link" target="_brank" rel="noopener">
-          <h3>{{ item.fields.projectName }} ({{ item.fields.year }})</h3>
-          <img :src="`https:${item.fields.image.fields.file.url}`">
+        <a :href="project.link" target="_brank" rel="noopener">
+          <h3>{{ project.projectName }} ({{ project.year }})</h3>
+          <img :src="`https:${project.image.fields.file.url}`">
         </a>
         <ul>
           <li
-            v-for="tag in sortTags(item.fields.tags)"
+            v-for="tag in project.tags"
             :key="tag.fields.slug"
           >
             {{ tag.fields.tagName }}
@@ -27,14 +27,11 @@
 <script>
 export default {
   props: {
-    items: {
+    projects: {
       type: Array,
       default: null
     },
   },
-  methods: {
-    sortTags: tags => tags.sort((a, b) => a.fields.order < b.fields.order ? -1 : 1)
-  }
 }
 </script>
 

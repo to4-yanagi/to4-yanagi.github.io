@@ -21,7 +21,7 @@ export default {
       { hid: 'description', name: 'description', content: 'my_portfolio' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '@/assets/img/favicon.png' }
+      { rel: 'icon', href: '@/assets/img/favicon.png' }
     ]
   },
   loading: { color: '#3B8070' },
