@@ -7,11 +7,13 @@
         v-for="(item, i) in items"
         :key="i"
       >
-        <h3>{{ item.fields.projectName }} ({{ item.fields.year }})</h3>
-        <img :src="`https:${item.fields.image.fields.file.url}`">
+        <a :href="item.fields.link" target="_brank" rel="noopener">
+          <h3>{{ item.fields.projectName }} ({{ item.fields.year }})</h3>
+          <img :src="`https:${item.fields.image.fields.file.url}`">
+        </a>
         <ul>
           <li
-            v-for="tag in item.fields.tags"
+            v-for="tag in sortTags(item.fields.tags)"
             :key="tag.fields.slug"
           >
             {{ tag.fields.tagName }}
@@ -30,6 +32,9 @@ export default {
       default: null
     },
   },
+  methods: {
+    sortTags: tags => tags.sort((a, b) => a.fields.order < b.fields.order ? -1 : 1)
+  }
 }
 </script>
 
@@ -43,13 +48,19 @@ export default {
     font-size: $font-title;
   }
 
-  h3 {
-    margin: $basic-margin 0;
-    font-size: $font-medium;
-  }
+  a {
+    cursor: pointer;
 
-  img {
-    width: 200px;
+    h3 {
+      margin: $basic-margin 0;
+      font-size: $font-medium;
+    }
+
+    img {
+      width: 200px;
+      max-height: 150px;
+      object-fit: cover;
+    }
   }
 
   ul {
@@ -71,6 +82,7 @@ export default {
       display: flex;
 
       .projext_container {
+        margin: $basic-double-margin;
         flex: 1;
       }
     }

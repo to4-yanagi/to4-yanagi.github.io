@@ -8,7 +8,6 @@
 <style lang="scss">
 @media (min-width: $tb-min-width) {
   .main_visual {
-    // background-color: $color-accent-bg;
     text-align: center;
 
     img {
