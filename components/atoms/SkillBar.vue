@@ -23,7 +23,7 @@ export default {
 <style lang="scss">
 
 .slill_bar {
-  margin-top: $basic-margin * 2;
+  margin-top: $basic-double-margin;
 
   progress {
     margin-top: $basic-half-margin;

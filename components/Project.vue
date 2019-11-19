@@ -1,20 +1,23 @@
 <template>
   <article class="project">
     <h2>Project</h2>
-    <div
-      v-for="(item, i) in items"
-      :key="i"
-    >
-      <h3>{{ item.fields.projectName }} ( {{ item.fields.year }} )</h3>
-      <img :src="`https:${item.fields.image.fields.file.url}`">
-      <ul>
-        <li
-          v-for="tag in item.fields.tags"
-          :key="tag.fields.slug"
-        >
-          {{ tag.fields.tagName }}
-        </li>
-      </ul>
+    <div class="projext_flex">
+      <div
+        class="projext_container"
+        v-for="(item, i) in items"
+        :key="i"
+      >
+        <h3>{{ item.fields.projectName }} ({{ item.fields.year }})</h3>
+        <img :src="`https:${item.fields.image.fields.file.url}`">
+        <ul>
+          <li
+            v-for="tag in item.fields.tags"
+            :key="tag.fields.slug"
+          >
+            {{ tag.fields.tagName }}
+          </li>
+        </ul>
+      </div>
     </div>
   </article>
 </template>
@@ -34,15 +37,14 @@ export default {
 .project {
   text-align: center;
   background-color: $color-basic-bg;
-  padding: $basic-margin;
+  padding: $basic-double-margin;
 
   h2 {
-    margin: $basic-margin;
     font-size: $font-title;
   }
 
   h3 {
-    margin: $basic-margin;
+    margin: $basic-margin 0;
     font-size: $font-medium;
   }
 
@@ -54,12 +56,23 @@ export default {
     display: flex;
     margin: $basic-margin;
     flex-wrap: wrap;
+    justify-content: center;
 
     li {
       margin: 5px;
       padding: 5px 10px;
       background: $color-accent;
       border-radius: 10px;
+    }
+  }
+
+  @media (min-width: $tb-min-width) {
+    .projext_flex {
+      display: flex;
+
+      .projext_container {
+        flex: 1;
+      }
     }
   }
 }

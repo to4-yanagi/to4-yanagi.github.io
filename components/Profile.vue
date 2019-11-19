@@ -45,18 +45,18 @@ export default {
 <style lang="scss">
 .profile {
   background-color: $color-basic-bg;
-  padding: $basic-margin;
+  padding: $basic-double-margin;
 
   .basic_info {
     text-align: center;
     margin-bottom: $basic-margin;
 
     h2 {
-      margin: $basic-margin;
       font-size: $font-title;
     }
 
     .main_icon {
+      margin-top: $basic-margin;
       width: 200px;
       height: 200px;
       border-radius: 100px;
@@ -67,6 +67,12 @@ export default {
       margin: $basic-margin;
       font-size: $font-big;
     }
+  }
+}
+
+@media (min-width: $tb-min-width) {
+ .profile {
+    padding: $basic-double-margin 30%;
   }
 }
 </style>

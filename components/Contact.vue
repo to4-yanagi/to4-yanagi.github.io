@@ -33,10 +33,10 @@ export default {
 .contact {
   text-align: center;
   background-color: $color-basic-bg;
-  padding: $basic-margin;
+  padding: $basic-double-margin 0;;
 
   h2 {
-    margin: $basic-margin;
+    margin-bottom: $basic-double-margin;
     font-size: $font-title;
   }
 
@@ -46,7 +46,7 @@ export default {
   }
 
   .mail {
-    margin-top: $basic-margin;
+    margin-top: $basic-double-margin;
   }
 }
 </style>
