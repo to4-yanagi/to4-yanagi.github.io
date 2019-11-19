@@ -16,7 +16,7 @@ export default {
   position: sticky;
   height: 60px;
   line-height: 60px;
-  background-color: $color-accent-bg;
+  background-color: rgba($color-accent-bg, 0.5);
   font-size: $font-title;
   text-align: center;
 }

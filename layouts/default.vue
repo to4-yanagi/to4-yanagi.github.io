@@ -21,9 +21,16 @@ export default {
 <style lang="scss">
 html {
   background-color: $color-basic-bg;
-  font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: $font-medium;
   box-sizing: border-box;
+
+  body {
+    font-family: 'Osaka-Mono', Roboto, sans-serif;
+
+    h2 {
+      font-family: NexaBold;
+    }
+  }
 }
 </style>
 

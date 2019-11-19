@@ -32,7 +32,7 @@ export default {
 
 <style lang="scss">
 .ability {
-  background-color: $color-accent-bg;
+  background-color: rgba($color-accent-bg, 0.5);
   padding: $basic-margin;
   text-align: center;
 
@@ -42,7 +42,7 @@ export default {
   }
 
   .ability_container {
-    margin-top: $basic-margin * 2;
+    margin: $basic-margin * 2 0;
 
     h3 {
       margin: $basic-margin;
@@ -50,7 +50,8 @@ export default {
     }
 
     img {
-      width: 200px;
+      width: 150px;
+      margin-bottom: $basic-margin;
     }
 
     .markdown-body {

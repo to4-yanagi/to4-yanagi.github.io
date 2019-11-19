@@ -29,6 +29,9 @@ export default {
     '@nuxtjs/markdownit',
     '@nuxtjs/style-resources'
   ],
+  css: [
+    { src: '@/assets/scss/_styles.scss' }
+  ],
   styleResources: {
     scss: [
       '@/assets/scss/_reset.scss',

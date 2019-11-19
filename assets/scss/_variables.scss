@@ -22,16 +22,15 @@ $paragraph-margin: $paragraph-line-height*$font-small;
 $color-white: #FFF;
 $color-black: #000;
 $color-gray: #E1E1E1;
-$color-orange: #F0BC8C;
-$color-skin: #F0DBB9;
-$color-gold: #F2D999;
-$color-pink: #F0BCB7;
-$color-blue: #DBECE4;
+$color-purple: #9592ed;
+$color-pink: #F5a7c4;
+$color-blue: #9ebcf7;
 
 // ---------- 色役割 基本的変数はこっちで呼ぶ
 $color-basic-font: $color-black;
 $color-basic-bg: $color-white;
 $color-accent-bg: $color-blue;
 $color-basic-border: $color-gray;
-$color-accent-bar: $color_orange;
-$color-accent: linear-gradient($color_orange, $color_pink);
+$color-accent-bar: $color_pink;
+$color-accent: $color_pink;
+// $color-accent: linear-gradient($color_pink, $color-purple);

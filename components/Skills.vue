@@ -50,7 +50,7 @@ export default {
 
 <style lang="scss">
 .skills {
-  background-color: $color-accent-bg;
+  background-color: rgba($color-accent-bg, 0.5);
   padding: $basic-margin;
   text-align: center;
 
