@@ -28,7 +28,10 @@ export default {
       { hid: 'og:url', property: 'og:url', content: 'https://laughcraft.dev/' },
       { hid: 'og:title', property: 'og:title', content: "Yanagi's portfolio" },
       { hid: 'og:description', property: 'og:description', content: 'フリーランスエンジニアyanagiのポートフォリオサイトです。' },
-      { hid: 'og:image', property: 'og:image', content: '/ogp.png' }
+      { hid: 'og:image', property: 'og:image', content: '/ogp.png' },
+      { hid: 'twitter:card', property: 'twitter:card', content: 'summary' },
+      { hid: 'twitter:player', property: 'twitter:player', content: '@to4_yanagi' },
+      { hid: 'fb:app_id', property: 'fb:app_id', content: '2295468084049542' }
     ]
   },
   loading: { color: '#3B8070' },
