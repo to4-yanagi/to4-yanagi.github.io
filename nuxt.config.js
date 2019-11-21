@@ -21,7 +21,14 @@ export default {
       { hid: 'description', name: 'description', content: "Yanagi's portfolio" }
     ],
     link: [
-      { rel: 'icon', href: '@/static/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { hid: 'description', name: 'description', content: 'フリーランスエンジニアyanagiのポートフォリオサイトです。' },
+      { hid: 'og:site_name', property: 'og:site_name', content: "Yanagi's portfolio" },
+      { hid: 'og:type', property: 'og:type', content: 'website' },
+      { hid: 'og:url', property: 'og:url', content: 'https://laughcraft.dev/' },
+      { hid: 'og:title', property: 'og:title', content: "Yanagi's portfolio" },
+      { hid: 'og:description', property: 'og:description', content: 'フリーランスエンジニアyanagiのポートフォリオサイトです。' },
+      { hid: 'og:image', property: 'og:image', content: '/ogp.png' }
     ]
   },
   loading: { color: '#3B8070' },
