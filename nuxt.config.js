@@ -14,14 +14,14 @@ const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
 
 export default {
   head: {
-    title: 'my_portfolio',
+    title: "Yanagi's portfolio",
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'my_portfolio' }
+      { hid: 'description', name: 'description', content: "Yanagi's portfolio" }
     ],
     link: [
-      { rel: 'icon', href: '@/assets/img/favicon.png' }
+      { rel: 'icon', href: '@/static/favicon.ico' }
     ]
   },
   loading: { color: '#3B8070' },
