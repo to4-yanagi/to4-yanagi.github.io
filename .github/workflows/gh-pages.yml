@@ -17,6 +17,9 @@ jobs:
 
     - name: Generate
       run: yarn generate
+      env:
+        CTF_SPACE_ID: ${{ secrets.CTF_SPACE_ID }}
+        CTF_CDA_ACCESS_TOKEN: ${{ secrets.CTF_CDA_ACCESS_TOKEN }}
 
     - name: add CNAME
       run: cp ./CNAME ./dist
