@@ -12,7 +12,6 @@
 
 <script>
 import Mixin from '@/static/mixin'
-import Card from '@/components/card'
 import MainVisual from '@/components/MainVisual'
 import News from '@/components/News'
 import Profile from '@/components/Profile'
@@ -25,7 +24,6 @@ import createClient from '@/plugins/contentful'
 export default {
   mixins: [Mixin],
   components: {
-    Card,
     MainVisual,
     News,
     Profile,
