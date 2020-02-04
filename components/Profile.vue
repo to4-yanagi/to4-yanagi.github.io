@@ -8,6 +8,7 @@
       <SocialIcon :link="githubLink" :icon="githubIcon" />
     </div>
     <div class="markdown-body" v-html="profile" />
+    <p>Wantedly: <a href="https://www.wantedly.com/users/86998412" target="_brank" rel="noopener">https://www.wantedly.com/users/86998412</a></p>
     <p>Mail: {{ mail }}</p>
   </article>
 </template>

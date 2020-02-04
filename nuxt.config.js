@@ -1,4 +1,3 @@
-import createClient from './plugins/contentful'
 import getConfigForKeys from './config.js'
 
 const ctfConfig = getConfigForKeys([
@@ -15,6 +14,9 @@ const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
 export default {
   head: {
     title: "Yanagi's portfolio",
+    htmlAttrs: {
+      lang: 'ja'
+    },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
