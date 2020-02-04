@@ -3,12 +3,12 @@
     <h2>Ability</h2>
     <div class="ability_flex">
       <div class="ability_container">
-        <img src="@/assets/img/web_develop.png">
+        <img src="@/assets/img/web_develop.png" alt="webシステムの開発/運用">
         <h3>webシステムの開発/運用</h3>
         <div class="markdown-body" v-html="webDevelop" />
       </div>
       <div class="ability_container">
-        <img src="@/assets/img/kaizen.png">
+        <img src="@/assets/img/kaizen.png" alt="既存業務の改善支援">
         <h3>既存業務の改善支援</h3>
         <div class="markdown-body" v-html="kaizen" />
       </div>

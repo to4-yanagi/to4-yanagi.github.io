@@ -1,15 +1,15 @@
 <template>
   <article class="project">
-    <h2>Project</h2>
-    <div class="projext_flex">
+    <h2>Projects</h2>
+    <div class="project_flex">
       <div
-        class="projext_container"
+        class="project_container"
         v-for="(project, i) in projects"
         :key="i"
       >
         <a :href="project.link" target="_brank" rel="noopener">
           <h3>{{ project.projectName }} ({{ project.year }})</h3>
-          <img :src="`https:${project.image.fields.file.url}`">
+          <img :src="`https:${project.image.fields.file.url}`" :alt="project.image.fields.description">
         </a>
         <ul>
           <li
@@ -19,6 +19,7 @@
             {{ tag.fields.tagName }}
           </li>
         </ul>
+        <div class="comment" v-html="project.comment.replace(/\r?\n/g, '<br/>')" />
       </div>
     </div>
   </article>
@@ -74,13 +75,33 @@ export default {
     }
   }
 
-  @media (min-width: $tb-min-width) {
-    .projext_flex {
-      display: flex;
+  .comment {
+    padding: 10px 20px;
+    text-align: left;
+    line-height: 20px;
+  }
 
-      .projext_container {
-        margin: $basic-double-margin;
-        flex: 1;
+  @media (min-width: $tb-min-width) {
+    .project_flex {
+      display: flex;
+      flex-wrap: wrap;
+
+      .project_container {
+        width: 44%;
+        margin: 10px auto 0 10px;
+
+        ul {
+          justify-content: left;
+        }
+      }
+    }
+  }
+
+  @media (min-width: $pc-min-width) {
+    .project_flex {
+      .project_container {
+        width: 29%;
+        margin: 20px auto 0 25px;
       }
     }
   }

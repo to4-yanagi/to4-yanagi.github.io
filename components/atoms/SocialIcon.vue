@@ -1,6 +1,6 @@
 <template>
   <a :href="link" target="_blank" rel="noopener">
-    <img class="social_icon" :src="icon">
+    <img class="social_icon" :src="icon" alt="contactリンク用のアイコン">
   </a>
 </template>
 

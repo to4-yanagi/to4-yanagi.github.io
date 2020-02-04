@@ -1,6 +1,6 @@
 <template>
   <article class="footer">
-    <p>© 2019 Toshiaki Yanagisawa</p>
+    <p>© 2020 Toshiaki Yanagisawa</p>
   </article>
 </template>
 

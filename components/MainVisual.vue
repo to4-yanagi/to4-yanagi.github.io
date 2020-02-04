@@ -1,6 +1,6 @@
 <template>
   <article class="main_visual">
-    <img src="@/assets/img/main_visual.png">
+    <img src="@/assets/img/main_visual.png" alt="メインヴィジュアル">
   </article>
 </template>
 

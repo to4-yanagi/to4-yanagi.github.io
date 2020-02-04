@@ -21,6 +21,15 @@
         />
       </div>
       <div class="skills_container">
+        <h3>チーム開発 / CI</h3>
+        <SkillBar
+          v-for="skill in skills.teams"
+          :key="skill.name"
+          :name="skill.name"
+          :score="skill.score"
+        />
+      </div>
+      <div class="skills_container">
         <h3>データベース</h3>
         <SkillBar
           v-for="skill in skills.databases"
@@ -29,7 +38,7 @@
           :score="skill.score"
         />
       </div>
-      <div class="skills_container">
+       <div class="skills_container">
         <h3>その他</h3>
         <SkillBar
           v-for="skill in skills.others"
@@ -85,6 +94,15 @@ export default {
       .skills_container {
         width: 44%;
         margin: $basic-margin;
+      }
+    }
+  }
+
+  @media (min-width: $pc-min-width) {
+    .skills_flex {
+      .skills_container {
+        width: 26%;
+        margin: $basic-double-margin;
       }
     }
   }

@@ -1,19 +1,12 @@
 <template>
   <section class="index">
     <MainVisual />
+    <News />
     <Profile />
     <Ability />
     <Project :projects="projects" />
     <Skills />
     <Contact />
-    <!-- <Card
-      v-for="(post, i) in posts"
-      :key="i"
-      :title="post.fields.title"
-      :id="post.sys.id"
-      :date="post.sys.updatedAt"
-      :slug="post.fields.slug"
-    /> -->
   </section>
 </template>
 
@@ -21,6 +14,7 @@
 import Mixin from '@/static/mixin'
 import Card from '@/components/card'
 import MainVisual from '@/components/MainVisual'
+import News from '@/components/News'
 import Profile from '@/components/Profile'
 import Ability from '@/components/Ability'
 import Project from '@/components/Project'
@@ -30,17 +24,10 @@ import createClient from '@/plugins/contentful'
 
 export default {
   mixins: [Mixin],
-  head () {
-    return {
-      title: this.siteTitle,
-      meta: [
-        { hid: 'description', name: 'description', content: this.siteTitle }
-      ]
-    }
-  },
   components: {
     Card,
     MainVisual,
+    News,
     Profile,
     Ability,
     Project,
@@ -57,22 +44,13 @@ export default {
         projectName: project.fields.projectName,
         year: project.fields.year,
         image: project.fields.image,
-        tags: project.fields.tags.sort((a, b) => a.fields.order < b.fields.order ? -1 : 1)
+        tags: project.fields.tags.sort((a, b) => a.fields.order < b.fields.order ? -1 : 1),
+        comment: project.fields.comment
       }
     })
     return {
       projects : sortedProjects
     }
   }
-  // async asyncData({ env, params }) {
-  //   return await createClient()
-  //     .getEntries('post')
-  //     .then(entries => {
-  //       return {
-  //         posts: entries.items
-  //       }
-  //     })
-  //     .catch(console.error)
-  // }
 }
 </script>

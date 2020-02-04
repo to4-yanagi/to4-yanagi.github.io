@@ -23,32 +23,28 @@
     {
       "name": "Python3",
       "score": 60
+    },
+    {
+      "name": "shell script",
+      "score": 80
     }
   ],
   "frameworks": [
     {
-      "name": "react / redux",
+      "name": "react / redux / gatsby",
       "score": 90
     },
     {
-      "name": "gatsby.js",
-      "score": 70
-    },
-    {
-      "name": "vue.js",
-      "score": 80
-    },
-    {
-      "name": "nuxt.js",
-      "score": 70
-    },
-    {
-      "name": "node.js",
+      "name": "vue /nuxt",
       "score": 80
     },
     {
       "name": "React Native",
       "score": 60
+    },
+    {
+      "name": "node.js",
+      "score": 80
     },
     {
       "name": "jest",
@@ -63,32 +59,10 @@
       "score": 50
     }
   ],
-  "databases": [
-    {
-      "name": "postgreSQL",
-      "score": 70
-    },
-    {
-      "name": "MySQL / MariaDB",
-      "score": 60
-    },
-    {
-      "name": "Firebase Realtime DB",
-      "score": 50
-    }
-  ],
-  "others": [
+  "teams": [
     {
       "name": "git",
       "score": 90
-    },
-    {
-      "name": "Linux / Unix",
-      "score": 70
-    },
-    {
-      "name": "wordpress",
-      "score": 70
     },
     {
       "name": "Docker",
@@ -99,12 +73,60 @@
       "score": 60
     },
     {
+      "name": "github actions",
+      "score": 90
+    },
+    {
       "name": "jenkins",
       "score": 60
     },
     {
       "name": "circleCI",
       "score": 60
+    }
+  ],
+  "databases": [
+    {
+      "name": "postgreSQL",
+      "score": 70
+    },
+    {
+      "name": "SQLite",
+      "score": 80
+    },
+    {
+      "name": "MySQL / MariaDB",
+      "score": 80
+    },
+    {
+      "name": "Firebase Realtime DB",
+      "score": 50
+    }
+  ],
+  "others": [
+    {
+      "name": "Linux / Unix",
+      "score": 80
+    },
+    {
+      "name": "wordpress",
+      "score": 70
+    },
+    {
+      "name": "JAMStack / HeadlessCMS",
+      "score": 80
+    },
+    {
+      "name": "AWS",
+      "score": 60
+    },
+    {
+      "name": "heroku",
+      "score": 70
+    },
+    {
+      "name": "github pages",
+      "score": 80
     }
   ]
 }
