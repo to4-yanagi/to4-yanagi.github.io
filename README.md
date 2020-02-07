@@ -9,7 +9,7 @@
 
 ## 構築 〜 起動
 
-1. git clone https://github.com/xemonodesign/xentaur.git
-2. cd xentaur
+1. git clone https://github.com/to4-yanagi/my_portfolio
+2. cd my_portfolio
 3. yarn
 4. yarn dev
