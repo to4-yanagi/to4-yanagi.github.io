@@ -4,7 +4,7 @@
     <div class="project_flex">
       <div
         class="project_container"
-        v-for="(project, i) in projects"
+        v-for="(project, i) in projectList"
         :key="i"
       >
         <a :href="project.link" target="_brank" rel="noopener">
@@ -28,7 +28,7 @@
 <script>
 export default {
   props: {
-    projects: {
+    projectList: {
       type: Array,
       default: null
     },

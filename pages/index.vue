@@ -1,10 +1,10 @@
 <template>
   <section class="index">
     <MainVisual />
-    <News />
+    <News :newsList="newsList" />
     <Profile />
     <Ability />
-    <Project :projects="projects" />
+    <Project :projectList="projectList" />
     <Skills />
     <Contact />
   </section>
@@ -33,10 +33,15 @@ export default {
     Contact
   },
   async asyncData({ env, params }) {
-    const { items } = await createClient().getEntries({
+    const projectList = await createClient().getEntries({
       content_type: "project"
     })
-    const sortedProjects = items.map(project => {
+
+    const newsList = await createClient().getEntries({
+      content_type: "news"
+    })
+
+    const sortedProjectList = projectList.items.map(project => {
       return {
         link: project.fields.link,
         projectName: project.fields.projectName,
@@ -47,7 +52,8 @@ export default {
       }
     })
     return {
-      projects : sortedProjects
+      newsList : newsList.items,
+      projectList : sortedProjectList
     }
   }
 }
