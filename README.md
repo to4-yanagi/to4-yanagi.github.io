@@ -1,23 +1,15 @@
-# my_portfolio
+# Yanagi's portfolio
 
-> my_portfolio
+## バージョン情報
 
-## Build Setup
+- node: 10.16.0
+- yarn: 1.21.0
 
-``` bash
-# install dependencies
-$ npm install # Or yarn install
+上記以外はpackage.json参照
 
-# serve with hot reload at localhost:3000
-$ npm run dev
+## 構築 〜 起動
 
-# build for production and launch server
-$ npm run build
-$ npm start
-
-# generate static project
-$ npm run generate
-```
-
-For detailed explanation on how things work, checkout the [Nuxt.js docs](https://github.com/nuxt/nuxt.js).
-
+1. git clone https://github.com/xemonodesign/xentaur.git
+2. cd xentaur
+3. yarn
+4. yarn dev

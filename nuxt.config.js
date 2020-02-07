@@ -5,12 +5,6 @@ const ctfConfig = getConfigForKeys([
   'CTF_CDA_ACCESS_TOKEN'
 ])
 
-const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
-  router: {
-    base: '/<repository-name>/'
-  }
-} : {}
-
 export default {
   head: {
     title: "Yanagi's portfolio",
@@ -37,6 +31,9 @@ export default {
     ]
   },
   loading: { color: '#3B8070' },
+  plugins: [
+    { src: '~plugins/vue-lazyload', ssr: false },
+  ],
   modules: [
     '@nuxtjs/markdownit',
     '@nuxtjs/style-resources'
@@ -68,10 +65,6 @@ export default {
       }
     }
   },
-  routerBase,
-  plugins: [
-    { src: '~plugins/vue-lazyload', ssr: false },
-  ],
   env: {
     CTF_SPACE_ID: ctfConfig.CTF_SPACE_ID,
     CTF_CDA_ACCESS_TOKEN: ctfConfig.CTF_CDA_ACCESS_TOKEN,
