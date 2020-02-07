@@ -69,6 +69,9 @@ export default {
     }
   },
   routerBase,
+  plugins: [
+    { src: '~plugins/vue-lazyload', ssr: false },
+  ],
   env: {
     CTF_SPACE_ID: ctfConfig.CTF_SPACE_ID,
     CTF_CDA_ACCESS_TOKEN: ctfConfig.CTF_CDA_ACCESS_TOKEN,

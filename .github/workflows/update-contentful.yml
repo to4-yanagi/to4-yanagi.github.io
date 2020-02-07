@@ -1,4 +1,4 @@
-name: updated stg contentful
+name: update contentful
 
 on:
   repository_dispatch:

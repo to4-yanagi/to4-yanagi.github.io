@@ -2,7 +2,11 @@
   <article class="profile">
     <div class="basic_info">
       <h2>About</h2>
-      <img class="main_icon" :src="mainIcon" alt="yanagi (柳沢 俊彰)のアイコン">
+      <client-only>
+        <lazy-component>
+          <img class="main_icon" :src="mainIcon" alt="yanagi (柳沢 俊彰)のアイコン">
+        </lazy-component>
+      </client-only>
       <h3>yanagi (柳沢 俊彰)</h3>
       <SocialIcon :link="twitterLink" :icon="twitterIcon" />
       <SocialIcon :link="githubLink" :icon="githubIcon" />

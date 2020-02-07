@@ -9,7 +9,11 @@
       >
         <a :href="project.link" target="_brank" rel="noopener">
           <h3>{{ project.projectName }} ({{ project.year }})</h3>
-          <img :src="`https:${project.image.fields.file.url}`" :alt="project.image.fields.description">
+          <client-only>
+            <lazy-component>
+              <img :src="`https:${project.image.fields.file.url}`" :alt="project.image.fields.description">
+            </lazy-component>
+          </client-only>
         </a>
         <ul>
           <li
