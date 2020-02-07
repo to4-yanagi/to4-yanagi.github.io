@@ -1,0 +1,32 @@
+  
+name: change repository
+
+on:
+  push:
+    branches:
+    - master
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+
+    - name: Install
+      run: yarn install
+
+    - name: Generate
+      run: yarn generate
+      env:
+        CTF_SPACE_ID: ${{ secrets.CTF_SPACE_ID }}
+        CTF_CDA_ACCESS_TOKEN: ${{ secrets.CTF_CDA_ACCESS_TOKEN }}
+
+    - name: add CNAME
+      run: cp ./CNAME ./dist
+
+    - name: Deploy
+      uses: peaceiris/actions-gh-pages@v2.4.0
+      env:
+        PERSONAL_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
+        PUBLISH_BRANCH: gh-pages
+        PUBLISH_DIR: ./dist

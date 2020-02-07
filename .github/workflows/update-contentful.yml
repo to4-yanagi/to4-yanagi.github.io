@@ -1,15 +1,12 @@
-  
-name: github pages
+name: updated stg contentful
 
 on:
-  push:
-    branches:
-    - master
+  repository_dispatch:
+    types: update-contentful
 
 jobs:
   build-deploy:
-    runs-on: ubuntu-18.04
-    steps:
+    runs-on: ubuntu-latest
     - uses: actions/checkout@master
 
     - name: Install
